@@ -41,15 +41,15 @@
 
 ### 编译镜像
 
-···powershell
+```powershell
 docker build --network host -t pcl-env-image:v1.0 .
-···
+```
 
 ### 创建并运行容器
 
-···powershell
+```powershell
 docker run -e DISPLAY=host.docker.internal:0.0 --gpus all -it --name pcl-docker -v /psth/to/your/pcl/:/home/pcl/ pcl-env-image:v1.0 bash
-···
+```
 
 ### 编译pcl库
 
@@ -57,6 +57,6 @@ docker run -e DISPLAY=host.docker.internal:0.0 --gpus all -it --name pcl-docker 
 
 ### 测试X11图形化
 
-···bash
+```bash
 pcl_viewer /home/pcl/test/pcl_logo.pcd
-···
+```
