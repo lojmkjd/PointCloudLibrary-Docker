@@ -48,7 +48,7 @@ docker build --network host -t pcl-env-image:v1.0 .
 ### 创建并运行容器
 
 ```powershell
-docker run -e DISPLAY=host.docker.internal:0.0 --gpus all -it --name pcl-docker -v /psth/to/your/pcl/:/home/pcl/ pcl-env-image:v1.0 bash
+docker run -e DISPLAY=host.docker.internal:0.0 --gpus all -it --name pcl-docker -v /path/to/your/pcl/:/home/pcl/ pcl-env-image:v1.0 bash
 ```
 
 ### 编译pcl库
